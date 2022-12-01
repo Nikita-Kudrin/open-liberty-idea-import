@@ -1,1 +1,0 @@
-package com.ibm.ws.security.social.fat.LibertyOP;

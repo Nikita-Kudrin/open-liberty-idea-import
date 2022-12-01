@@ -1,5 +1,0 @@
-<beans>
-   <interceptors>
-      <class>mpRestClientFT.retry.LoggableInterceptor</class>
-   </interceptors>
-</beans>

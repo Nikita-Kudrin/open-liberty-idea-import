@@ -21,21 +21,21 @@ def getFeatureMap = {
         Set<String> featuresBeta = new TreeSet()
         Set<String> featuresNoShip = new TreeSet()
         Set<String> publicFeatures = new TreeSet()
-        project(':com.ibm.websphere.appserver.features').fileTree(dir: '.', include: 'visibility/**/*.feature').each { featureFile ->
-            Properties featureProps = new Properties()
-            featureFile.withInputStream { featureProps.load(it) }
-            map.put(featureProps['symbolicName'], featureProps)
-            if ('ga'.equals(featureProps['kind'])) {
-                featuresGa.add(featureProps['symbolicName'])
-                if ('public'.equals(featureProps['visibility'])) {
-                    publicFeatures.add(featureProps['IBM-ShortName'])
-                }
-            } else if ('beta'.equals(featureProps['kind'])) {
-                featuresBeta.add(featureProps['symbolicName'])
-            } else if ('noship'.equals(featureProps['kind'])) {
-                featuresNoShip.add(featureProps['symbolicName'])
-            }
-        }
+//        project(':com.ibm.websphere.appserver.features').fileTree(dir: '.', include: 'visibility/**/*.feature').each { featureFile ->
+//            Properties featureProps = new Properties()
+//            featureFile.withInputStream { featureProps.load(it) }
+//            map.put(featureProps['symbolicName'], featureProps)
+//            if ('ga'.equals(featureProps['kind'])) {
+//                featuresGa.add(featureProps['symbolicName'])
+//                if ('public'.equals(featureProps['visibility'])) {
+//                    publicFeatures.add(featureProps['IBM-ShortName'])
+//                }
+//            } else if ('beta'.equals(featureProps['kind'])) {
+//                featuresBeta.add(featureProps['symbolicName'])
+//            } else if ('noship'.equals(featureProps['kind'])) {
+//                featuresNoShip.add(featureProps['symbolicName'])
+//            }
+//        }
         featurePropertiesMap = map
         gaFeatures = featuresGa
         betaFeatures = featuresBeta
@@ -411,7 +411,7 @@ if (isAutomatedBuild) {
         from project.file('build/temp/mavenArtifact')
         include "io/**"
         archiveName 'openliberty-mavenArtifact.zip'
-        destinationDir distsDir
+//        destinationDir distsDir
     }
 
     publishing {

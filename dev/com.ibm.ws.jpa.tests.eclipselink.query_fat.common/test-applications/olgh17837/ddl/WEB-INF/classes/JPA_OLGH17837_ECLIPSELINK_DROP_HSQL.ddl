@@ -1,2 +1,0 @@
-DROP TABLE ${schemaname}.COLTABLE1;
-DROP TABLE ${schemaname}.OLGH17837ENTITY;

@@ -1,9 +1,0 @@
-<server>
-    <featureManager>
-        <feature>restfulWS-3.0</feature>
-    </featureManager>
-
-  	<include location="../fatTestPorts.xml"/>
-
-	<javaPermission className="java.lang.RuntimePermission" name="accessDeclaredMembers"/>
-</server>
